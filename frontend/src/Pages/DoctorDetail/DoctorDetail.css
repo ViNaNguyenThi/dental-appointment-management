@@ -1,0 +1,113 @@
+.doctor-detail-page {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.doctor-title {
+  font-size: 30px;
+  color: #5790ab;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.doctor-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng nếu cần */
+}
+
+.doctor-info {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Cho phép các phần tử trong .doctor-info tự động xuống dòng */
+}
+
+.doctor-image-placeholder {
+  width: 590px;
+  height: 590px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-right: 20px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: ảnh nhỏ lại trên các màn hình nhỏ */
+.doctor-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.doctor-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-left: 30px;
+}
+
+/* Điều chỉnh text cho phù hợp */
+.doctor-details p {
+  margin-top: 25px;
+  font-size: 25px;
+  text-align: left;
+  color: #5790ab;
+}
+
+/* Media Queries cho các màn hình nhỏ hơn */
+
+@media (max-width: 768px) {
+  .doctor-title {
+    font-size: 24px;
+  }
+
+  .doctor-detail-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .doctor-info {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .doctor-image-placeholder {
+    width: 100%;
+    height: 300px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .doctor-details {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .doctor-details p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-title {
+    font-size: 20px;
+  }
+
+  .doctor-image-placeholder {
+    height: 250px;
+  }
+
+  .doctor-details p {
+    font-size: 16px;
+  }
+}

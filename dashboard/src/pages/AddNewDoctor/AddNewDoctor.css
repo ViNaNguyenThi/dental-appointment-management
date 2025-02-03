@@ -1,0 +1,71 @@
+.body-page {
+    margin-left: "250px";
+    padding: "20px"
+}
+
+.add-doctor-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+}
+
+.add-doctor-form form {
+    width: 100%;
+}
+
+.add-doctor-form form .first-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.add-doctor-form form .first-wrapper div:first-child {
+    flex: 1;
+}
+
+.add-doctor-form form .first-wrapper div:first-child img {
+    width: 100%;
+    height: 515px;
+    margin-bottom: 20px;
+}
+
+.add-doctor-form form .first-wrapper div:first-child input {
+    width: 100%;
+    padding: 10px;
+}
+
+.add-doctor-form form .first-wrapper div:first-child input:file-selector-button {
+    position: absolute;
+    width: 100%;
+}
+
+.add-doctor-form form .first-wrapper div:last-child {
+    flex: 2;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.add-doctor-form form input,
+.add-doctor-form form select,
+.add-doctor-form form textarea {
+    flex: 1;
+    font-size: 24px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 7px;
+    border: 1px solid gray;
+}
+
+.add-doctor-form button {
+    padding: 10px 35px;
+    color: #fff;
+    font-weight: 700;
+    width: fit-content;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    background: linear-gradient(140deg, #9083d5, #271776ca);
+}

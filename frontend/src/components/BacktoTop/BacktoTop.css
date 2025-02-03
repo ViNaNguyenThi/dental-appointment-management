@@ -1,0 +1,27 @@
+
+.back-to-top-btn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #5790ab;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Làm nút hình tròn */
+    font-size: 18px;
+    width: 50px;  /* Chiều rộng nút */
+    height: 50px; /* Chiều cao nút */
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-top-btn:hover {
+    background-color: #274c77;
+    color: white;
+  }
+  

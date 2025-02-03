@@ -1,0 +1,214 @@
+@import "../../App.css";
+.footer {
+  background-color: var(--blue);
+  padding: 40px 40px;
+  color: white;
+}
+
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr; /* 3 cột */
+  grid-template-rows: auto auto; /* 2 dòng */
+  gap: 33px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.logo-footer {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+.company-info {
+  grid-column: 1 / 2; /* Cột đầu tiên */
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+.company-content {
+  grid-column: 1 / 2; /* Vẫn ở cột đầu tiên nhưng bên dưới */
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.footer-links {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+}
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: -40px;
+}
+.footer-links a {
+  color: white;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-location {
+  grid-column: 3/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-location ul {
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-location a {
+  color: white;
+  margin-left: -40px;
+}
+.footer-info {
+  grid-column: 3 / 4; /* Cột thứ ba */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 23px;
+}
+
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 24px;
+  color: white;
+}
+
+
+.social-icons a:hover {
+  color: #add8e6;
+}
+.icon-social {
+  width: 20px;
+  height: 20px;
+}
+
+
+.footer-container h3 {
+  margin: 15px 0;
+}
+
+
+@media (max-width: 1024px) {
+  .footer-location h3 {
+    text-align: left;
+  }
+  .footer-location ul {
+    padding: 0;
+  }
+  .company-info {
+    flex-direction: column;
+  }
+  .logo-footer {
+    align-self: start;
+  }
+  .footer-links {
+    justify-content: center;
+    padding-bottom: 65px;
+  }
+  .footer-location {
+    justify-content: center;
+  }
+  .footer-location a {
+    margin: 0;
+  }
+  .footer-location ul {
+    flex-direction: column;
+  }
+  .social-icons {
+    gap: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px;
+  }
+  .footer-content {
+    grid-template-columns: min-content;
+    grid-template-rows: auto;
+    width: fit-content;
+    gap: 20px;
+  }
+  .company-info {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .logo-footer {
+    width: 100px;
+    height: 100px;
+    align-self: start;
+  }
+  .footer-container {
+    width: 100%;
+    align-self: start;
+  }
+  .footer-container h3 {
+    font-size: 15px;
+  }
+  .company-content {
+    gap: 20px;
+    justify-content: normal;
+    width: 100%;
+    justify-self: start;
+  }
+  .company-content h3 {
+    font-size: 15px;
+    text-align: justify;
+  }
+  .footer-links {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .footer-location {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    gap: 0;
+  }
+
+
+  .footer-location h3 {
+    font-size: 17px;
+  }
+  .footer-location ul {
+    padding: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-location a {
+    margin: 0;
+  }
+  .footer-contact {
+    width: 80%;
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+  .footer-info {
+    grid-column: 2/3;
+    gap: 5px;
+  }
+  .social-icons {
+    gap: 0;
+  }
+}

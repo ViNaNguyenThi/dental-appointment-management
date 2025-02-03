@@ -1,0 +1,330 @@
+.container-admin {
+  display: flex;
+  /* Sử dụng flex để tạo layout */
+  background-color: white;
+  /* Màu nền cho form */
+  border-radius: 8px;
+  /* Bo góc */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng nhẹ cho form */
+  overflow: hidden;
+  /* Ẩn phần vượt ra ngoài biên */
+  max-width: 800px;
+  /* Độ rộng tối đa cho container */
+  width: 100%;
+  /* Độ rộng 100% */
+}
+
+.image-container-admin {
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  height: 666px;
+  width: 655px;
+  margin-right: 60px;
+}
+
+.image-container-admin img {
+  object-fit: cover;
+  border-radius: 20px;
+  height: 666px;
+  width: 655px;
+}
+
+.login-container-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.login-image-admin img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* Đảm bảo ảnh không bị biến dạng */
+}
+
+.form-container-admin {
+  flex: 0 0 500px;
+  /* Độ rộng cố định cho form */
+  padding: 40px;
+  /* Padding cho form */
+}
+
+.login-form-admin {
+  /* padding-left: 20px; */
+  /* width: 520px; */
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.login-form-admin p {
+  font-size: 18px;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.login-form-admin h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--blue);
+}
+
+.input-box-admin,
+.password-box-admin {
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 16px;
+  border: 3px solid var(--blue);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  color: var(--darkblue);
+}
+
+/* Áp dụng màu biên khi focus */
+.input-box-admin:focus {
+  border-color: var(--darkblue);
+  /* Màu biên khi focus */
+}
+
+.password-container-admin {
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border: 3px solid var(--blue);
+  padding-left: 16px;
+  padding-right: 5px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  /* Thêm thuộc tính này */
+}
+
+/* Sử dụng pseudo-class :focus-within để áp dụng hiệu ứng khi ô input bên trong có focus */
+.password-container-admin:focus-within {
+  border-color: #007bff;
+}
+
+.password-input-admin {
+  width: 100%;
+  font-size: 20px;
+  background-color: transparent;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  color: var(--darkblue);
+}
+
+.password-icon-admin {
+  color: #888888;
+  width: 35px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding-right: 16px;
+}
+
+.password-icon-admin:hover {
+  color: var(--blue);
+}
+
+.btn-primary-admin {
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color:var(--blue);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 25px;
+}
+
+.btn-primary-admin:hover {
+  background-color: var(--darkblue);
+  color: white;
+}
+
+
+
+.error-message {
+  color: #ff0000 !important;
+  /* Màu chữ cho thông báo lỗi */
+  font-size: 12px;
+  /* Kích thước chữ cho thông báo lỗi */
+  margin-bottom: 20px !important;
+  /* Khoảng cách dưới thông báo lỗi */
+  margin-top: 20px !important;
+  /* Khoảng cách dưới thông báo lỗi */
+  text-align: start;
+  /* Căn giữa thông báo lỗi */
+}
+
+/* Ẩn logo trong chế độ bình thường */
+.logo-container {
+  display: none;
+  /* Ẩn logo mặc định */
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Đổi hướng từ row sang column */
+    max-width: 100%;
+    /* Đặt max-width cho container */
+  }
+
+  .image-container,
+  .image-container-signup {
+    display: none;
+    /* Ẩn ảnh trong màn hình nhỏ */
+  }
+
+  .form-container,
+  .login-form,
+  .signup-form {
+    padding: 20px;
+    /* Giảm padding cho form */
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .google-btn,
+  .btn-primary,
+  .btn-primary-signup,
+  .btn-role {
+    width: 100%;
+    /* Đặt độ rộng nút theo kích thước của container */
+  }
+
+  .password-container,
+  .input-box {
+    width: 100%;
+    /* Đặt độ rộng input theo kích thước của container */
+  }
+
+  h1 {
+    font-size: 28px;
+    /* Giảm kích thước tiêu đề */
+  }
+
+  .forgot-password,
+  .forgot-password-admin,
+  .create-account,
+  .footer-login {
+    font-size: 12px;
+    /* Giảm kích thước chữ cho các đoạn văn */
+  }
+
+  .login-role-text {
+    margin: 0 30px;
+    /* Giảm khoảng cách giữa text và đường gạch */
+    font-size: 14px;
+  }
+
+  .line {
+    height: 1px;
+    /* Giảm chiều cao của đường gạch */
+  }
+
+  /* Hiển thị logo khi ở chế độ responsive */
+  .logo-container {
+    display: block;
+    /* Hiển thị logo */
+  }
+
+  .backHome {
+    font-size: 16px;
+  }
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+    /* Xóa padding container */
+  }
+
+  h1 {
+    font-size: 24px;
+    /* Giảm tiếp kích thước tiêu đề */
+  }
+
+  .forgot-password,
+  .forgot-password-admin,
+  .create-account,
+  .footer-login {
+    font-size: 15px;
+    /* Giảm tiếp kích thước chữ cho các đoạn văn */
+  }
+
+  .google-btn,
+  .btn-primary,
+  .btn-primary-signup,
+  .btn-role {
+    height: 45px;
+    /* Điều chỉnh chiều cao của các nút */
+    font-size: 18px;
+  }
+
+  .input-box,
+  .password-container {
+    height: 50px;
+    /* Điều chỉnh chiều cao của input */
+    font-size: 18px;
+  }
+}
+
+
+
+  /* Responsive design */
+  
+  /* @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .image-section {
+      display: none; 
+    }
+  
+    .login-section {
+      width: 100%;
+      max-width: 100%;
+      padding: 20px;
+      box-shadow: none;
+    }
+  } */
+  
+  /* @media (max-width: 480px) {
+    .btn-submit,
+    .google-btn,
+    .doctor-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    input[type="email"],
+    input[type="password"] {
+      font-size: 14px;
+    }
+  }
+   */

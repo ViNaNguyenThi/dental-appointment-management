@@ -1,0 +1,103 @@
+/* Sidebar tổng thể */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #274C77;
+    /* Màu xanh đậm */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    /* Ẩn thanh cuộn */
+}
+
+/* Logo */
+.logo {
+    width: 100%;
+    text-align: start;
+    padding: 30px 0 30px 30px;
+}
+
+.logo img {
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mục menu chung */
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+/* Icon trong link */
+.menu-link .icon {
+    font-size: 18px;
+    margin-right: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng khi hover */
+.menu-link:hover {
+    background-color: #ffffff;
+    /* Màu nền trắng khi hover */
+    color: #274C77;
+    /* Text màu xanh đậm khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Bóng đổ nhẹ */
+}
+
+.menu-link:hover .icon {
+    color: #274C77;
+    /* Màu icon xanh đậm khi hover */
+    transform: scale(1.2);
+    /* Tăng kích thước icon khi hover */
+}
+
+/* Mục menu đang active */
+.menu-link.active {
+    background-color: #ffffff;
+    /* Nền trắng khi active */
+    color: #274C77;
+    /* Text màu xanh đậm khi active */
+    font-weight: bold;
+    /* Tăng đậm chữ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Bóng đổ nhẹ */
+}
+
+.menu-link.active .icon {
+    color: #274C77;
+    /* Màu icon xanh đậm khi active */
+}

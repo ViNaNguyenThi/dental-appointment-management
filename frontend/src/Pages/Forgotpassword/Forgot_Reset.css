@@ -1,0 +1,209 @@
+/* --------------------------------------Quên Mật Khẩu-------------------------------------- */
+
+.forgot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .forgot-container img {
+    object-fit: cover;
+  border-radius: 20px;
+  height: 666px;
+  width: 655px;
+  }
+  
+  .forgot-form {
+    width: 500px;
+  }
+  
+  .forgot-form h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 0px;
+    font-family: playfair display;
+    margin: 25px 0;
+    color: #004168;
+    font-weight: 500;
+  }
+  
+  .image-container-forgot {
+    background-image: url("./assets/images/forgot_password.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 666px;
+    width: 655px;
+    margin-right: 80px;
+    border-radius: 20px;
+  }
+
+  .forgot-form p {
+    font-size: 18px;
+    font-family: raleway;
+    color: #162F4A;
+    font-weight: 600;
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .input-icon-container {
+    position: relative;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #162F4A;
+    /* Màu sắc của icon */
+  }
+  
+  .input-box-with-icon {
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    border: 3px solid #004168;
+    border-radius: 10px;
+    margin: 25px 0;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    padding-left: 60px;
+    /* Khoảng cách để đủ chỗ cho icon */
+  }
+  
+  .input-box-with-icon:focus {
+    border-color: #007bff;
+    /* Màu biên khi focus */
+  }
+  
+  .input-box-with-icon::placeholder {
+    color: #162f4a;
+    /* Đổi màu chữ placeholder */
+    opacity: 0.7;
+    /* Điều chỉnh độ mờ của placeholder, 1 là không mờ */
+  }
+  
+  .btn-primary-forgot {
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    font-family: playfair display;
+    font-weight: 700;
+    background-color: #004168;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 25px 0;
+  }
+  
+  .btn-primary-forgot:hover {
+    background-color: #EFD099;
+    color: #162F4A;
+  }
+  
+  .text-center h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 0px;
+    font-family: playfair display;
+    margin: 35px 0;
+    color: #004168;
+    font-weight: 500;
+  }
+  
+  .text-center p {
+    font-size: 18px;
+    font-family: raleway;
+    color: #162F4A;
+    font-weight: 600;
+    margin: 35px 0;
+    text-align: center;
+  }
+  
+  /* Media query cho các màn hình nhỏ hơn */
+  @media screen and (max-width: 768px) {
+    .forgot-container {
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Đảm bảo chiều cao chiếm đủ màn hình */
+    }
+  
+    .image-container-forgot {
+      display: none;
+    }
+  
+    .forgot-form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .forgot-form {
+      width: 100%;
+    }
+  
+    .input-box-forgot,
+    .btn-primary-forgot {
+      width: 100%;
+    }
+  
+    .btn-primary-forgot {
+      font-size: 18px;
+    }
+  
+    .forgot-form h1 {
+      font-size: 28px;
+    }
+  
+    .forgot-form p {
+      font-size: 18px;
+    }
+  
+    .backHome {
+      font-size: 16px;
+    }
+  }
+  
+  /* Media query cho các màn hình rất nhỏ (ví dụ: điện thoại) */
+  @media screen and (max-width: 480px) {
+    .forgot-container {
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Căn giữa theo chiều dọc cho màn hình nhỏ */
+    }
+  
+    .image-container-forgot {
+      display: none;
+    }
+  
+    .forgot-container {
+      padding: 15px;
+    }
+  
+    .forgot-form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .input-box-with-icon,
+    .btn-primary-forgot {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+    }
+  
+    .forgot-form h1 {
+      font-size: 24px;
+    }
+  
+    .forgot-form p {
+      font-size: 18px;
+    }
+  }  

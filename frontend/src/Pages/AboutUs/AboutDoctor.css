@@ -1,0 +1,238 @@
+/* Thiết lập chung */
+
+.about-doctor {
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto; /* Căn giữa phần tử */
+  display: block; /* Đảm bảo phần tử là block */
+}
+
+.about-doctor__header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.about-doctor__header h2 {
+  font-size: 28px;
+  color: #5790ab;
+  margin-bottom: 10px;
+}
+
+.about-doctor__header p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.8;
+  max-width: 100%;
+}
+
+/* Các phần thông tin của bác sĩ */
+.about-doctor__team-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.about-doctor__team-image img {
+  max-width: 100%;
+  height: 700px;
+  width: 1300px;
+}
+
+.about-doctor__image-caption {
+  font-size: 17px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.about-doctor__description {
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* Thiết kế cho các phần thông tin */
+.about-doctor__info-section {
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+}
+
+.about-doctor__section-header {
+  display: flex;
+  align-items: center;
+  background-color: #5790ab;
+  padding: 10px;
+  color: white;
+  border-radius: 0px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc (nếu cần) */
+}
+
+.about-doctor__section-header h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal; /* Chữ không đậm */
+  text-align: center;
+}
+
+.about-doctor__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột */
+  gap: 50px; /* Khoảng cách giữa các ô */
+  justify-items: center;
+  margin-top: 50px;
+}
+
+.about-doctor__button {
+  text-align: center;
+}
+
+.about-doctor__button button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-doctor__button img {
+  width: 590px; /* Điều chỉnh kích thước ảnh theo ý muốn */
+  height: 590px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-doctor__button p {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Responsive Styles */
+
+/* Các kiểu cho màn hình lớn hơn 1200px */
+@media (max-width: 1200px) {
+  .about-doctor__header h2 {
+    font-size: 24px;
+  }
+
+  .about-doctor__header p {
+    font-size: 14px;
+  }
+
+  .about-doctor__description {
+    font-size: 14px;
+  }
+
+  .about-doctor__section-header {
+    font-size: 16px;
+  }
+
+  .about-doctor__section-header h3 {
+    font-size: 18px;
+  }
+
+  .about-doctor__image-caption {
+    font-size: 14px;
+  }
+}
+
+/* Các kiểu cho màn hình vừa (máy tính bảng, laptop nhỏ) */
+@media (max-width: 992px) {
+  .about-doctor {
+    padding: 15px;
+  }
+
+  .about-doctor__header h2 {
+    font-size: 22px;
+  }
+
+  .about-doctor__header p {
+    font-size: 14px;
+  }
+
+  .about-doctor__description {
+    font-size: 14px;
+  }
+
+  .about-doctor__section-header {
+    font-size: 14px;
+  }
+
+  .about-doctor__team-image {
+    margin: 15px 0;
+  }
+}
+
+/* Các kiểu cho màn hình nhỏ (máy tính bảng nhỏ và điện thoại) */
+@media (max-width: 768px) {
+  .about-doctor__header h2 {
+    font-size: 20px;
+  }
+
+  .about-doctor__header p {
+    font-size: 13px;
+  }
+
+  .about-doctor__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .about-doctor__section-header h3 {
+    font-size: 16px;
+  }
+
+  .about-doctor__team-image img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-doctor__description {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Các kiểu cho màn hình điện thoại */
+@media (max-width: 576px) {
+  .about-doctor__header h2 {
+    font-size: 18px;
+  }
+
+  .about-doctor__header p {
+    font-size: 12px;
+  }
+
+  .about-doctor__section-header {
+    font-size: 12px;
+  }
+
+  .about-doctor__section-header h3 {
+    font-size: 14px;
+  }
+
+  .about-doctor__description {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .about-doctor__team-image img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.text-primary {
+  color: var(--darkblue); /* Thay đổi thành màu bạn muốn */
+}
+
+.text-regular {
+  color: var(--blue); /* Màu chữ khi không active */
+}
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 15px;
+}
+h5 {
+  font-size: 32px;
+}

@@ -1,0 +1,108 @@
+.navbar-profile {
+    font-family: 'Lato';
+    background: var(--blue);
+    margin: 24px;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 250px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    line-height: 2;
+}
+
+
+.menu-icon {
+    font-family: 'Lato';
+    cursor: pointer;
+    font-size: 24px;
+    color: #004168;
+    margin-bottom: 10px;
+    display: none;
+}
+
+
+
+
+.navbar-profile ul {
+    font-family: 'Lato';
+
+
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.navbar-profile li {
+    text-align: start;
+    width: 100%;
+}
+
+
+.navbar-profile a {
+    font-family: 'Lato';
+    text-decoration: none;
+    color: #EBEBEB;
+    font-size: 20px;
+    width: 100%;
+    padding: 8px 0;
+    position: relative;
+    display: inline;
+
+
+}
+
+
+.navbar-profile a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+
+.navbar-profile a.active {
+    font-weight: bold;
+    color: white; /* Changes the active link color to black */
+}
+.navbar-profile a:hover {
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-profile ul {
+        display: none;
+    }
+
+
+ 
+    .navbar-profile ul.open {
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-profile {
+        display: none;
+    }
+
+
+    .navbar-profile.open {
+        display: flex;
+    }
+
+
+    .menu-icon {
+        display: block;
+    }
+}

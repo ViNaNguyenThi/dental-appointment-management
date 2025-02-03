@@ -1,0 +1,54 @@
+.special-offer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 50px 0;
+}
+
+.special-offer__content {
+  width: 1340px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.special-offer__text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  gap: 20px;
+}
+
+.special-offer__title {
+  font-size: 40px;
+}
+
+.special-offer__button {
+  width: 412px;
+  height: 78px;
+  background-color: var(--blue); /* Màu nền cho nút, thay đổi nếu cần */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #e2ebef;
+    color: var(--blue);
+  }
+}
+.calendar-booking {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
+.special-offer__button:hover .calendar-booking {
+  content: url("../../assets/calendar_booking_hover.png"); /* Đổi đường dẫn đến icon mới */
+}

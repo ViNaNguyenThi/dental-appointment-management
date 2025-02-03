@@ -1,0 +1,232 @@
+/* Thiết lập chung */
+.aboutus {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto; /* Căn giữa phần tử */
+  display: block; /* Đảm bảo phần tử là block */
+}
+
+.aboutus .header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.aboutus .header h2 {
+  font-size: 28px;
+  color: #5790ab;
+  margin-bottom: 10px;
+}
+
+.aboutus .header p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.8;
+  max-width: 100%;
+}
+
+/* Các phần thông tin của nhóm */
+.aboutus .team-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.aboutus .team-image img {
+  max-width: 100%;
+  height: 700px;
+  width: 1300px;
+}
+
+.aboutus .image-caption {
+  font-size: 17px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.aboutus .description {
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* Thiết kế cho các phần thông tin */
+.aboutus .info-section {
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+}
+
+.aboutus .section-header {
+  display: flex;
+  align-items: center;
+  background-color: #5790ab;
+  padding: 10px;
+  color: white;
+  border-radius: 0px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.aboutus .section-header .icon {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.aboutus .section-header h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal; /* Chữ không đậm */
+}
+
+.aboutus .tech-list {
+  color: #333;
+  margin: 1em 0;
+  padding-left: 0; /* Loại bỏ padding ban đầu */
+  text-align: left; /* Căn lề trái */
+}
+
+.aboutus .tech-list li {
+  padding-left: 20px; /* Tạo khoảng cách lề trái */
+  margin-bottom: 0.5em;
+  list-style-position: inside; /* Đảm bảo ký hiệu danh sách căn trái */
+  list-style-type: disc;
+}
+
+/* Responsive Styles */
+
+/* Các kiểu cho màn hình lớn hơn 1200px */
+@media (max-width: 1200px) {
+  .aboutus .header h2 {
+    font-size: 24px;
+  }
+
+  .aboutus .header p {
+    font-size: 14px;
+  }
+
+  .aboutus .description {
+    font-size: 14px;
+  }
+
+  .aboutus .section-header {
+    font-size: 16px;
+  }
+
+  .aboutus .section-header h3 {
+    font-size: 18px;
+  }
+
+  .aboutus .image-caption {
+    font-size: 14px;
+  }
+}
+
+/* Các kiểu cho màn hình vừa (máy tính bảng, laptop nhỏ) */
+@media (max-width: 992px) {
+  .aboutus {
+    padding: 15px;
+  }
+
+  .aboutus .header h2 {
+    font-size: 22px;
+  }
+
+  .aboutus .header p {
+    font-size: 14px;
+  }
+
+  .aboutus .description {
+    font-size: 14px;
+  }
+
+  .aboutus .section-header {
+    font-size: 14px;
+  }
+
+  .aboutus .tech-list li {
+    font-size: 14px;
+  }
+
+  .aboutus .team-image {
+    margin: 15px 0;
+  }
+}
+
+/* Các kiểu cho màn hình nhỏ (máy tính bảng nhỏ và điện thoại) */
+@media (max-width: 768px) {
+  .aboutus .header h2 {
+    font-size: 20px;
+  }
+
+  .aboutus .header p {
+    font-size: 13px;
+  }
+
+  .aboutus .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .aboutus .section-header h3 {
+    font-size: 16px;
+  }
+
+  .aboutus .team-image img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .aboutus .tech-list li {
+    font-size: 12px;
+  }
+
+  .aboutus .description {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Các kiểu cho màn hình điện thoại */
+@media (max-width: 576px) {
+  .aboutus .header h2 {
+    font-size: 18px;
+  }
+
+  .aboutus .header p {
+    font-size: 12px;
+  }
+
+  .aboutus .section-header {
+    font-size: 12px;
+  }
+
+  .aboutus .section-header h3 {
+    font-size: 14px;
+  }
+
+  .aboutus .description {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .aboutus .tech-list li {
+    font-size: 10px;
+  }
+
+  .aboutus .team-image img {
+    width: 100%;
+  }
+}

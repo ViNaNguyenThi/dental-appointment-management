@@ -1,0 +1,310 @@
+@import "../../App.css";
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Để tạo bóng mờ */
+  position: relative;
+  width: 100%;
+  top: 0;
+  justify-content: space-between; /* Căn giữa logo và các phần tử khác */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.itemsnav {
+  max-width: 1200px; /* Hoặc giá trị cụ thể bạn muốn để canh giữa */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-grow: 1; /* Để cho itemsnav có không gian để căn giữa logo */
+}
+
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.menu.open {
+  display: block;
+  gap: 70px;
+}
+
+.menu-item {
+  font-size: 18px;
+  padding: 20px;
+  &:hover {
+    color: var(--darkblue);
+  }
+}
+.menu-item.dropdown {
+  position: relative;
+}
+.menu-item.dropdown.hovered > a {
+  color: var(--darkblue); /* Màu chữ khi hover */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 80%;
+  top: 105%;
+  left: 10px;
+  background-color: #ffffff;
+  border: 2px solid var(--blue);
+  padding: 10px;
+  z-index: 10;
+  border-radius: 5px;
+  justify-items: start;
+}
+
+.menu-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: var(--blue);
+  &:hover {
+    color: var(--darkblue);
+  }
+}
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* Thêm CSS cho icon SVG trong menu toggle */
+.btn-menu svg {
+  width: 30px;
+  height: 30px;
+}
+.btn-menu {
+  background-color: white;
+  border: none;
+}
+
+.text-primary {
+  color: var(--darkblue);
+}
+
+.text-regular {
+  color: var(--blue);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  will-change: filter;
+  transition: filter 300ms;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnLogin {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--darkblue);
+  }
+}
+.text-menu-about {
+  color: var(--blue);
+  &:hover {
+    color: var(--darkblue);
+  }
+}
+/* Khi menu được mở (isOpen = true) */
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+}
+.dropdown-user {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-left: -50px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 0;
+  overflow: hidden;
+  width: 157px;
+  border: solid 2px #5790ab;
+}
+
+.dropdown-user a,
+.dropdown-user button {
+  display: block;
+  padding: 10px 15px;
+  color: #5790ab;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0px;
+  background: white;
+  height: 40px;
+  font-size: 16px;
+}
+
+.dropdown-user a:hover,
+.dropdown-user button:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.dropdown-user::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px; /* Điều chỉnh vị trí của mũi tên */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff; /* Màu mũi tên giống nền dropdown */
+}
+/* Khi màn hình ở kích thước trung bình trở lên (md) */
+@media (min-width: 768px) {
+  .itemsnav {
+    gap: 20px;
+  }
+  /* Giả định kích thước md bắt đầu từ 768px */
+  .grid-container {
+    grid-template-columns: repeat(
+      6,
+      1fr
+    ); /* Giảm số cột xuống 6 trên màn hình nhỏ */
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    gap: 20px;
+    padding: 0;
+  }
+  .logo2 {
+    display: none;
+  }
+  .btnLogin2 {
+    display: none;
+  }
+  .buttonLogin2 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Giảm số cột xuống 3 trên màn hình rất nhỏ */
+  }
+  .navbar {
+    display: block;
+  }
+  .itemsnav {
+    margin: 0;
+    gap: 0;
+    padding: 0;
+  }
+  .btnLogin-wrapper {
+    display: block;
+    margin-top: 20px; /* Thêm khoảng cách cho div bao quanh */
+    text-align: center;
+  }
+
+  .btnLogin {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .logo {
+    display: block;
+  }
+  .menu {
+    display: block;
+    position: fixed;
+    top: -15px;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%); /* Ẩn menu bằng cách chuyển nó ra ngoài */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Đảm bảo menu luôn ở trên */
+    padding: 70px 20px 0 20px;
+    list-style: none;
+  }
+  .menu.open {
+    transform: translateX(0);
+  }
+  .menu h3 {
+    padding: 10px 0;
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu h3 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+
+  .menu h3 a:hover {
+    color: var(--darkblue);
+  }
+  .menu link {
+    margin-top: 20px;
+  }
+  .menu-item {
+    padding: 0;
+  }
+  .btn-menu {
+    position: relative;
+    z-index: 1100;
+    left: -100px;
+  }
+  .menu div {
+    align-items: center;
+    width: fit-content;
+  }
+  .dropdown-menu {
+    position: relative;
+    display: block;
+    opacity: 100%; /* Hiển thị đầy đủ */
+    background-color: white; /* Chỉnh màu nền cho dễ nhìn */
+    width: 100%;
+    box-shadow: none; /* Loại bỏ shadow nếu cần */
+  }
+  .menu-item.dropdown:hover .dropdown-menu {
+    display: block;
+    border: none;
+    width: 95%;
+    padding: 0;
+  }
+  .dropdown-menu li {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,321 @@
+@import "../../App.css";
+
+/* Appointment */
+/* Tổng thể của form */
+.form-component-appointmentform {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-component-appointmentform h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4a7a96;
+}
+
+/* Chỉnh lại khoảng cách giữa các input */
+.form-component-appointmentform input[type="number"],
+.form-component-appointmentform input[type="text"],
+.form-component-appointmentform input[type="date"],
+.form-component-appointmentform input[type="email"],
+.form-component-appointmentform select,
+.form-component-appointmentform textarea {
+  /* width: 100%; */
+  padding: 8px;
+  height: 80px;
+  margin: 10px 0;
+  border: 2px solid #4a7a96;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #4a7a96;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #4a7a96;
+  /* Thay đổi mã màu theo ý muốn */
+}
+
+/* Hai input trên cùng (Tên và Họ) */
+.form-component-appointmentform div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-component-appointmentform div:first-child input {
+  width: 100%;
+}
+
+/* Hai input số điện thoại và email */
+.form-component-appointmentform div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-component-appointmentform div:nth-child(2) input {
+  width: 49%;
+}
+
+/* Row chứa ngày sinh và giới tính */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-row input,
+.form-row select {
+  width: 49%;
+}
+
+/* Row chứa dịch vụ khám và ngày khám */
+/* .form-component-appointmentform div:nth-child(6) {
+    display: flex;
+    justify-content: space-between;
+} */
+
+/* .form-component-appointmentform div:nth-child(6) select,
+.form-component-appointmentform div:nth-child(6) input {
+    width: 100%;
+} */
+
+/* Đảm bảo phần chọn bác sĩ có chiều rộng bằng với form */
+.selectDoctor select {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  border: 2px solid #4a7a96;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  /* Đảm bảo padding và border không làm tràn phần tử */
+}
+
+/* Đảm bảo chiều rộng của container (div) của chọn bác sĩ bằng với form */
+.selectDoctor {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectDoctor select:disabled {
+  background-color: #f0f0f0;
+  /* Thêm màu nền khi ô chọn bị disable */
+  cursor: not-allowed;
+  /* Thêm con trỏ không thể chọn */
+}
+
+/* Cập nhật cho phần NIC */
+/* .form-component-appointmentform input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 2px solid #4a7a96;
+  border-radius: 20px;
+  box-sizing: border-box;
+} */
+
+.form-component-appointmentform textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #4a7a96;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Checkbox cho câu hỏi khám trước đây */
+.hasvisited {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox-appointment {
+  margin-right: 10px;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.hasvisited-appointment {
+  font-size: 20px;
+  color: #4a7a96;
+}
+
+/* Nút gửi đăng ký */
+.button-dkikham {
+  background-color: #4a7a96;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-dkikham:hover {
+  background-color: #3a5f73;
+}
+
+/* .add-move {
+    height: 40px;
+    width: 40px;
+} */
+
+/* Nút thêm và xóa lựa chọn */
+.add-move {
+  background-color: transparent;
+  border: solid 2px #3a5f73;
+  color: #3a5f73;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Hiệu ứng hover cho nút */
+.add-move:hover {
+  background-color: #3a5f73;
+  color: white;
+  border: none;
+}
+
+.form-row .service-select {
+  width: calc(49%); /* Cả hai ô input chiếm 50% khi không có nút */
+}
+
+.form-row .service-select.short {
+  width: calc(45%); /* Giảm chiều rộng của ô thứ hai khi có nút xóa */
+}
+
+/* Media queries cho responsive design */
+@media (max-width: 768px) {
+  .form-component-appointmentform {
+    width: 90%;
+  }
+
+  /* Các input sẽ chiếm toàn bộ chiều ngang ở màn hình nhỏ */
+  .form-component-appointmentform div:first-child,
+  .form-component-appointmentform div:nth-child(2),
+  .form-row,
+  .form-component-appointmentform div:nth-child(6) {
+    flex-direction: column;
+  }
+
+  .form-component-appointmentform div:first-child input,
+  .form-component-appointmentform div:nth-child(2) input,
+  .form-row input,
+  .form-row select,
+  .form-component-appointmentform div:nth-child(6) input,
+  .form-component-appointmentform div:nth-child(6) select {
+    width: 100%;
+  }
+
+  /* Đặt lại margin và padding */
+  .form-component-appointmentform input,
+  .form-component-appointmentform select {
+    margin-bottom: 15px;
+  }
+}
+
+/* Responsive cho các thiết bị có độ rộng màn hình tối đa 480px */
+@media (max-width: 480px) {
+  .form-component-appointmentform {
+    padding: 15px;
+    /* Thêm padding cho form */
+  }
+
+  .form-component-appointmentform h2 {
+    font-size: 24px;
+    /* Giảm kích thước font cho tiêu đề */
+  }
+
+  .button-dkikham {
+    font-size: 16px;
+    /* Giảm kích thước font chữ trên nút */
+    padding: 10px;
+    /* Thêm padding vào nút để dễ bấm */
+  }
+
+  .selectDoctor select {
+    padding: 10px;
+    /* Thêm padding cho ô chọn bác sĩ */
+    font-size: 14px;
+    /* Giảm kích thước font chữ cho ô chọn bác sĩ */
+  }
+
+  .selectDoctor {
+    margin-top: 8px;
+    /* Giảm khoảng cách trên giữa các phần tử */
+  }
+
+  .form-row input,
+  .form-row select {
+    font-size: 14px;
+    /* Giảm kích thước font cho các input và select */
+    padding: 10px;
+    /* Thêm padding vào input và select */
+  }
+
+  .form-row {
+    flex-direction: column;
+    /* Đảm bảo các input xếp theo chiều dọc trên màn hình nhỏ */
+  }
+
+  .form-component-appointmentform textarea {
+    font-size: 14px;
+    /* Giảm kích thước font chữ trong textarea */
+    padding: 10px;
+    /* Thêm padding cho textarea */
+  }
+
+  .hasvisited-appointment {
+    font-size: 14px;
+    /* Giảm kích thước font chữ cho câu hỏi đã khám trước đây */
+  }
+
+  .checkbox-appointment {
+    transform: scale(1.2);
+    /* Tăng kích thước checkbox để dễ chọn */
+  }
+}
+
+/* Media Queries cho thiết bị di động */
+@media (max-width: 767px) {
+  .selectDoctor select {
+    padding: 10px;
+    /* Giảm padding trên thiết bị nhỏ */
+    font-size: 14px;
+    /* Giảm kích thước font chữ trên thiết bị nhỏ */
+  }
+
+  .selectDoctor {
+    margin-top: 8px;
+  }
+}
+
+/* Media Queries cho máy tính bảng */
+@media (max-width: 1024px) {
+  .selectDoctor select {
+    padding: 12px;
+    /* Giữ padding bình thường trên máy tính bảng */
+    font-size: 15px;
+    /* Giảm kích thước font chữ trên máy tính bảng */
+  }
+}

@@ -1,0 +1,213 @@
+@import "../../App.css";
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.signup-form {
+  padding-left: 20px;
+  width: 500px;
+}
+
+.signup-form h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--blue);
+}
+
+.image-container-signup {
+  background-image: url("./assets/images/signup.jpg");
+  /* Đường dẫn tới hình ảnh */
+  background-size: cover;
+  /* Làm đầy container với hình ảnh */
+  background-position: center;
+  /* Căn giữa hình ảnh */
+  height: 666px;
+  /* Đảm bảo chiều cao của container */
+  width: 655px;
+  margin-left: 80px;
+  border-radius: 20px;
+}
+
+.image-container-signup img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.signup-form p {
+  font-size: 18px;
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.button-dk {
+  margin-top: 30px;
+}
+
+.btn-primary-signup {
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary-signup:hover {
+  background-color: var(--darkblue);
+  color: white;
+}
+
+.link-create-signup {
+  padding-left: 8px;
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.create-account-signup {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--blue);
+}
+
+.input-box,
+.password-box {
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 16px;
+  border: 3px solid var(--blue);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+/* Áp dụng màu biên khi focus */
+.input-box:focus {
+  border-color: var(--darkblue);
+  /* Màu biên khi focus */
+}
+
+/* Responsive */
+
+/* Điều chỉnh cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Đổi hướng từ row sang column */
+    max-width: 100%;
+    /* Đặt max-width cho container */
+  }
+
+  .image-container,
+  .image-container-signup {
+    display: none;
+    /* Ẩn ảnh trong màn hình nhỏ */
+  }
+
+  .form-container,
+  .login-form,
+  .signup-form {
+    padding: 20px;
+    /* Giảm padding cho form */
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .btn-primary,
+  .btn-primary-signup,
+  .btn-role {
+    width: 100%;
+    /* Đặt độ rộng nút theo kích thước của container */
+  }
+
+  .password-container,
+  .input-box {
+    width: 100%;
+    /* Đặt độ rộng input theo kích thước của container */
+  }
+
+  h1 {
+    font-size: 28px;
+    /* Giảm kích thước tiêu đề */
+  }
+
+  .forgot-password,
+  .forgot-password-admin,
+  .create-account,
+  .footer-login {
+    font-size: 12px;
+    /* Giảm kích thước chữ cho các đoạn văn */
+  }
+
+  .login-role-text {
+    margin: 0 30px;
+    /* Giảm khoảng cách giữa text và đường gạch */
+    font-size: 14px;
+  }
+
+  .line {
+    height: 1px;
+    /* Giảm chiều cao của đường gạch */
+  }
+
+  /* Hiển thị logo khi ở chế độ responsive */
+  .logo-container {
+    display: block;
+    /* Hiển thị logo */
+  }
+
+  .backHome {
+    font-size: 16px;
+  }
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+    /* Xóa padding container */
+  }
+
+  h1 {
+    font-size: 24px;
+    /* Giảm tiếp kích thước tiêu đề */
+  }
+
+  .forgot-password,
+  .forgot-password-admin,
+  .create-account,
+  .footer-login {
+    font-size: 15px;
+    /* Giảm tiếp kích thước chữ cho các đoạn văn */
+  }
+
+  .btn-primary,
+  .btn-primary-signup,
+  .btn-role {
+    height: 45px;
+    /* Điều chỉnh chiều cao của các nút */
+    font-size: 18px;
+  }
+
+  .input-box,
+  .password-container {
+    height: 50px;
+    /* Điều chỉnh chiều cao của input */
+    font-size: 18px;
+  }
+}
